@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  p
+    button#BULD(onclick="buttonAction('bulb')") BULD
+  p  
+    button#AC(onclick="buttonAction('ac')") AC
+  p  
+    button#FAN(onclick="buttonAction('fan')") FAN
+  p
+    h1
+      a(href='/users/ac') Ac  
+  p  
+    h1
+      a(href='/users/fan') Fan  
+  p  
+    h1
+      a(href='/users/bulb') Bulb  
+  p   
+    h1
+      a(href='/users/clean') clear  
+  script.
+    function buttonAction(component) {
+    console.log(component);
+    }
+
+  
